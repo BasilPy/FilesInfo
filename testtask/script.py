@@ -2,10 +2,12 @@ import os
 from pathlib import Path
 import pandas as pd
 
+
 class FilesInfo:
     """
     Find all files in script folder path and subfolders. Store data to "result.xlsx".
     """
+    
     data_list = []
     count = 0
 
@@ -39,6 +41,7 @@ class FilesInfo:
         """
         data_frame = pd.DataFrame(self.data_list)
         data_frame.to_excel('result.xlsx', index=False)
+
 
 if __name__ == "__main__":
     files_info_collector = FilesInfo()
